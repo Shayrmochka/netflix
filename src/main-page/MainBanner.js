@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 import "./MainBanner.css";
 
 function MainBanner() {
+  const tryFree = (e) => {
+    e.preventDefault();
+    console.log(e.target.regEmail.value);
+  };
+
   return (
     <div className="wrapper__image wrapper__layout">
       <div className="wrapper--fadeTop"></div>
@@ -47,10 +52,17 @@ function MainBanner() {
           </h3>
         </div>
 
-        <div className="main-info__buttons">
-          <input className="main-info__input" placeholder="Email address" />
-          <button className="main-info__submit">Try 30 days free</button>
-        </div>
+        <form className="main-info__buttons" onSubmit={(e) => tryFree(e)}>
+          <input
+            className="main-info__input"
+            placeholder="Email address"
+            type="email"
+            id="regEmail"
+          />
+          <button className="main-info__submit" type="submit">
+            Try 30 days free
+          </button>
+        </form>
 
         <div className="main-info__footer">
           <h3 className="main-info__titles--smallest">

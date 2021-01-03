@@ -1,34 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link, Redirect, useHistory } from "react-router-dom";
+import fire from "../fire";
 import "./SignIn.css";
 
-const data = [
-  {
-    id: 0,
-    email: "nathan@gmail.com",
-    password: "qwe",
-  },
-  {
-    id: 0,
-    email: "test@gmail.com",
-    password: "111",
-  },
-  {
-    id: 0,
-    email: "qwe@gmail.com",
-    password: "123",
-  },
-];
-
-function SignIn() {
+function SignIn(props) {
   const history = useHistory();
   const [learnMore, setLearnMore] = useState({ visible: false });
 
-  useEffect(() => {
-    // return () => {
-    //   cleanup
-    // }
-  }, []);
+  const {
+    email,
+    setEmail,
+    password,
+    setPassword,
+    handleSignIn,
+    handleSignUp,
+    hasAccount,
+    setHasAccount,
+    emailError,
+    passwordError,
+  } = props;
 
   const authWithEmailAndPassword = (email, password) => {
     const API_KEY_FIREBASE = "AIzaSyCsfGk4Wn4C2f812lSAaKT1oqvQTT7ljjI";
@@ -52,11 +42,16 @@ function SignIn() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    let email = e.target.elements.email.value.toLowerCase();
-    let password = e.target.elements.password.value.toLowerCase();
+    let email = e.target.elements.email.value;
+    let password = e.target.elements.password.value;
     let signIn = e.target.elements.signIn;
     console.log(email, password);
 
+    setEmail(email);
+    setPassword(password);
+
+    handleSignIn();
+    console.log(!!emailError, !!passwordError);
     signIn.disabled = true;
     // <Redirect to="/movies" />;
 
@@ -112,6 +107,7 @@ function SignIn() {
                 id="email"
                 placeholder="Email"
               />
+              <p>{emailError}</p>
               <input
                 className="sign-in__input"
                 type="password"
@@ -119,6 +115,7 @@ function SignIn() {
                 id="password"
                 placeholder="Password"
               />
+              <p>{passwordError}</p>
               <button
                 type="submit"
                 className="sign-in__button-submit"
