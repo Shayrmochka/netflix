@@ -1,0 +1,125 @@
+.contact-us__footer-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #221f1f;
+  height: 256px;
+}
+
+.contact-us__footer-block {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  width: 100%;
+  color: #221f1f;
+}
+
+.contact-us__footer-select-block {
+  position: relative;
+  width: 220px;
+}
+
+.contact-us__footer-select {
+  color: #8b8a88;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15px;
+  background: none;
+  border: 1px solid #8b8a88;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 20px;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 45px 13px 16px;
+  position: relative;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  z-index: 1;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.contact-us__footer-select:hover {
+  color: #fff;
+  background: #8b8a88;
+}
+
+.contact-us__footer-select:hover .contact-us__footer-svg {
+  animation: hoverArrow 0.15s ease-in-out;
+}
+
+.contact-us__footer-svg {
+  height: 24px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 24px;
+  z-index: 2;
+  fill: #8b8a88;
+}
+
+@keyframes hoverArrow {
+  0% {
+    fill: #fff;
+  }
+  50% {
+    fill: #fff;
+  }
+  100% {
+    fill: #fff;
+  }
+}
+
+.contact-us__footer-item {
+  display: inline;
+  padding-left: 40px;
+}
+
+.contact-us__footer-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #8b8a88;
+}
+
+.contact-us__footer-link:hover {
+  color: #b1b1b1;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact-us__block {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .contact-us__footer-item {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .contact-us__footer-block {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-us__footer-wrapper {
+    height: 300px;
+  }
+
+  .contact-us__footer-block {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .contact-us__footer-list {
+    padding: 0;
+  }
+
+  .contact-us__footer-item {
+    padding: 20px 0 0;
+  }
+}

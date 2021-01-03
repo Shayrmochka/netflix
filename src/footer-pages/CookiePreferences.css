@@ -1,0 +1,156 @@
+.cookie__wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.cookie__block {
+  width: 720px;
+  height: 500px;
+  background: #fff;
+}
+
+.cookie__header {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.cookie__header-logo {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cookie__logo-block {
+  width: 30%;
+
+  padding: 20px 0;
+}
+
+.cookie__text-block {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookie__text {
+  padding-left: 20px;
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cookie__close-block {
+  padding-right: 20px;
+}
+
+.cookie__button-close {
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.cookie__icon-close {
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+}
+
+.cookie__button-close:hover {
+  fill: #444444;
+}
+
+.cookie__main-section {
+  display: flex;
+}
+
+.cookie__main-section-left {
+  width: 30%;
+}
+
+.cookie__main-section-right {
+  width: 70%;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.cookie__left-button {
+  width: 100%;
+  padding: 16px 5px 16px 20px;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #d8d8d8;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 500;
+  /* font-weight: 600; -- change font-family and set this*/
+  background-color: #f4f4f4;
+}
+
+.cookie__left-button--active {
+  padding-left: 10px;
+  border: none;
+  border-left: 10px solid #e50914;
+  color: #333333;
+  font-size: 1em;
+  background-color: #ffffff;
+}
+
+.cookie__title-text {
+  padding: 20px;
+  color: #333333;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.cookie__main-text {
+  color: #333333;
+  padding: 20px 20px 0;
+  word-break: break-word;
+  text-align: left;
+  font-size: 0.82em;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.cookie__footer {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: space-between;
+  border-top: 1px solid #d8d8d8;
+}
+
+.cookie__footer-text {
+  font-size: 0.82em;
+  color: #333333;
+}
+
+.cookie__footer-text--green {
+  font-size: 1rem;
+  color: #6fbe4a;
+}
+
+.cookie__footer-button {
+  padding: 10px 30px;
+  background-color: #e50914;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}

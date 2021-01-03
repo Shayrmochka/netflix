@@ -1,0 +1,140 @@
+.faq-wrapper {
+  display: flex;
+  padding: 0 48px;
+  /* max-width: 1248px; */
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.faq-wrapper__left-block {
+  /* background-color: khaki; */
+  width: 70%;
+}
+
+.faq-wrapper__right-block {
+  /* background-color: lightcoral; */
+  width: 30%;
+}
+
+.faq-left-block__section {
+  font-size: 17px;
+  font-weight: 300;
+  border-bottom: 1px solid #d5d4d1;
+  margin-bottom: 20px;
+}
+
+.faq-section__title--large {
+  font-size: 32px;
+  font-weight: 700;
+  /* margin-bottom: 8px; */
+}
+
+.faq-section__title--default {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.faq-section__text {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0 0 16px;
+}
+
+.faq-section__text--note {
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 24px;
+  border-left: 4px solid #d5d4d1;
+}
+
+.faq-section__text--bold {
+  font-weight: 500;
+}
+
+.faq-section__ul-list {
+  margin-left: -10px;
+}
+
+.faq-section__ol-item {
+  list-style: decimal;
+  margin-bottom: 8px;
+}
+
+.faq-section_link--red {
+  font-size: 17px;
+  text-decoration: none;
+  color: #e50914;
+}
+
+.faq-section_link--red:hover {
+  text-decoration: underline;
+}
+
+.faq-left-block__section-question {
+  height: 100px;
+}
+
+.faq-section__button {
+  padding: 16px;
+  height: 48px;
+  letter-spacing: 0.01em;
+  min-width: 96px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid;
+  outline: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.faq-section__button--red {
+  margin-left: 16px;
+  padding: 16px;
+  height: 48px;
+  min-width: 96px;
+  color: #e50914;
+  background: #fff;
+  border-color: #e50914;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.faq-section__button--gray {
+  margin-left: 16px;
+  padding: 16px;
+  height: 48px;
+  min-width: 96px;
+  color: #4c4948;
+  background: #fff;
+  border-color: #8b8a88;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.faq-section__button--red:hover {
+  color: #fff;
+  background: #e50914;
+}
+
+.faq-section__button--gray:hover {
+  color: #4c4948;
+  background: rgb(238, 238, 238);
+  border-color: #8b8a88;
+}
+
+.faq-question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  height: 96px;
+  border-top: 1px solid #d5d4d1;
+  background: #eaeae6;
+}
+
+.faq-question-wrapper__title {
+  font-size: 24px;
+  font-weight: 700;
+}

@@ -1,0 +1,151 @@
+.simple-nav__wrapper {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  height: 64px;
+}
+
+.simple-nav__block {
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simple-nav__left {
+  display: flex;
+  align-items: center;
+}
+
+.simple-nav__logo {
+  width: 90px;
+  fill: #e50914;
+}
+
+.simple-nav__header-svg {
+  vertical-align: middle;
+}
+
+.simple-nav__header-svg--mobile {
+  display: none;
+}
+
+.simple-nav__slash {
+  margin: 0 20px;
+  height: 24px;
+  width: 1px;
+  background: #fff;
+}
+
+.simple-nav__help-center {
+  color: #fff;
+  font-size: 18px;
+}
+
+.simple-nav__button {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  /* transition: 0.15s; */
+}
+
+.simple-nav__button--black {
+  padding: 8px;
+  background: #000;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.simple-nav__button--black:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.simple-nav__button--red {
+  margin-left: 16px;
+  padding: 8px 24px;
+
+  background: #e50914;
+  color: #fff;
+  border: 1px solid #e50914;
+}
+
+.simple-nav__button--red:hover {
+  background-color: #d30812;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1000px) {
+  .simple-nav__block {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .simple-nav__wrapper {
+    height: 100px;
+  }
+
+  .simple-nav__block {
+    padding: 0 20px;
+  }
+
+  .simple-nav__header-svg {
+    vertical-align: middle;
+    display: none;
+  }
+
+  .simple-nav__header-svg--mobile {
+    display: block;
+  }
+
+  .simple-nav__slash {
+    display: none;
+  }
+
+  .simple-nav__help-center-block {
+    margin-top: 15px;
+  }
+
+  .simple-nav__block {
+    align-items: stretch;
+    padding: 24px 20px 0;
+  }
+
+  .simple-nav__left {
+    flex-direction: column;
+  }
+
+  .simple-nav__button--black {
+    padding: 8px;
+  }
+
+  .simple-nav__button--red {
+    margin-left: 16px;
+    padding: 8px 14px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .simple-nav__wrapper {
+    height: 110px;
+  }
+  .simple-nav__buttons-block {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    text-align: center;
+  }
+  .simple-nav__button--red {
+    margin-left: 0;
+  }
+
+  .simple-nav__button--black {
+    margin-top: 10px;
+  }
+}
