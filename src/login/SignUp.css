@@ -1,0 +1,138 @@
+.sign-up-border {
+  height: 90px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.sign-up-size {
+  width: 167px;
+  vertical-align: middle;
+}
+
+.header__sign-in-button {
+  color: #333;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.sign-up__section {
+  margin: 150px auto 100px;
+  width: 340px;
+  text-align: center;
+}
+
+.sign-up__section-wide {
+  margin: 20px auto 100px;
+  width: 400px;
+}
+
+.sign-up__devices-img {
+  width: 260px;
+  height: auto;
+}
+
+.sign-up__steps {
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.sign-up__title {
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.sign-up__description {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.sign-up__continue {
+  margin-top: 10px;
+  padding: 0.75rem 25.33333333px;
+  min-width: 110px;
+  width: 100%;
+  min-height: 48px;
+  font-weight: 400;
+  font-size: 17px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  color: #fff;
+  background: #e50914;
+  cursor: pointer;
+}
+
+.sign-up__margin {
+  margin-bottom: 12px;
+}
+
+.sign-up-section__footer {
+  border-top: 1px solid #e5e5e5;
+  background-color: #f3f3f3;
+}
+
+.sign-up-links-block {
+  margin: 30px 20px 0px;
+}
+
+.sign-up__blue-title {
+  margin: 20px 0;
+  padding: 20px 0;
+  background-color: #0071eb;
+  color: #fff;
+}
+
+.sign-up__input {
+  padding: 0 10px;
+  margin: 10px 0;
+  height: 60px;
+  min-width: 94%;
+  max-width: 100%;
+  border: solid 1px #8c8c8c;
+  outline: none;
+}
+
+.sign-up__checkbox-block {
+  display: flex;
+  align-items: center;
+}
+
+.sign-up__checkbox {
+  width: 25px;
+  height: 25px;
+}
+
+.sign-up__checkbox-description {
+  font-weight: 300;
+  margin-left: 10px;
+}
+
+.sign-up__checkmark-img {
+  width: 50px;
+  height: 50px;
+  margin: 0 0 20px;
+}
+
+.sign-up__ul-block {
+  margin: 24px 0;
+  text-align: left;
+}
+
+.sign-up__li-block {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sign-up__checkmark-group--icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  fill: #e50914;
+  margin-left: -20px;
+}
+
+.sign-up__li-description {
+  font-size: 17px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-top: 2px;
+}

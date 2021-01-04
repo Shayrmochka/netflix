@@ -1,8 +1,9 @@
 import { React, useState, useEffect } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Router } from "react-router-dom";
 import fire from "./fire";
 
 import MainPage from "./main-page/MainPage";
+import SignUp from "./login/SignUp";
 import SignIn from "./login/SignIn";
 import MoviesLibraryPage from "./movies-library/MoviesLibraryPage";
 import ContactUs from "./footer-pages/ContactUs";
@@ -108,6 +109,7 @@ function App() {
         <Route path="/movies" component={MoviesLibraryPage} />
         <Route path="/contactus" component={ContactUs} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/signup" component={SignUp} />
       </div>
     </BrowserRouter>
   );

@@ -59,9 +59,11 @@ function MainBanner() {
             type="email"
             id="regEmail"
           />
-          <button className="main-info__submit" type="submit">
-            Try 30 days free
-          </button>
+          <Link to="/signup">
+            <button className="main-info__submit" type="submit">
+              Try 30 days free
+            </button>
+          </Link>
         </form>
 
         <div className="main-info__footer">
