@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RegForm from "./RegForm";
 import RegNotification from "./RegNotification";
+import RegPlan from "./RegPlan";
 import RegPreview from "./RegPreview";
 
 import "./SignUp.css";
@@ -41,9 +42,9 @@ function SignUp() {
         </div>
       </header>
 
-      <RegNotification />
+      <RegPlan />
 
-      <footer className="sign-up-section__footer">
+      {/* <footer className="sign-up-section__footer">
         <div className="footer__links-block sign-up-links-block">
           <div className="footer__header">
             <Link to="/contactus" className="footer__contact">
@@ -93,7 +94,7 @@ function SignUp() {
             <span className="footer__text">Netflix Belarus</span>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
