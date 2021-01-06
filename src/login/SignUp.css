@@ -138,12 +138,32 @@
 }
 
 .sign-up__price-wrapper {
-  padding: 0 20%;
+  /* padding: 0 20%; */
+  padding-top: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sign-up__plan-step {
+  font-size: 13px;
+}
+
+.sign-up__plan-title {
+  margin: 10px 0;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.sign-up__plan-description {
+  font-size: 16px;
 }
 
 .sign-up__price-block {
+  min-width: 960px;
+  /* position: fixed; */
   display: flex;
   justify-content: flex-end;
+  background-color: #fff;
 }
 
 .sign-up__plan-block {
@@ -151,8 +171,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  width: 80px;
+  height: 120px;
+  width: 120px;
   color: #fff;
   background: #e50914;
   opacity: 0.6;
@@ -170,19 +190,6 @@
   min-width: 300px;
 }
 
-/* .sign-up__table-row {
-  padding: 0 20px;
-} */
-
-/* .sign-up__table-item {
-  min-width: 80px;
-  background-color: lightcyan;
-}
-
-.sign-up__table-titles {
-  position: relative;
-} */
-
 @media only screen and (max-width: 1300px) {
   .sign-up__price-wrapper {
     padding: 0 10%;
@@ -195,6 +202,10 @@
     padding: 0;
     margin: 0 auto;
   }
+
+  .sign-up__price-block {
+    min-width: 100%;
+  }
 }
 
 table {
@@ -203,9 +214,10 @@ table {
 }
 
 .sign-up__table-td-item {
-  width: 120px;
-  background-color: lightcyan;
+  width: 160px;
+  /* background-color: lightcyan; */
   text-align: center;
+  color: #a6a6a6;
 }
 
 .sign-up__table-row {
@@ -214,4 +226,118 @@ table {
 
 .sign-up__table-row--border {
   border-bottom: 1px solid #ccc;
+}
+
+.sign-up__thin-check {
+  width: 18px;
+  height: 18px;
+  fill: #a6a6a6;
+}
+
+.sign-up__table-description {
+  padding: 10px 16px 10px;
+  color: #737373;
+  font-size: 13px;
+}
+
+.sign-up__table-description--link {
+  text-decoration: none;
+  color: #0071eb;
+}
+
+.sign-up__bottom-button-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
+.sign-up__reg-plan-page {
+  min-width: 110px;
+  max-width: 460px;
+}
+
+.sign-up__target-plan-true {
+  opacity: 1;
+}
+
+.sign-up__target-item-true {
+  color: #e50914;
+}
+
+.sign-up__target-item-true > svg {
+  fill: #e50914;
+}
+
+.sign-up__pay-not-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sign-up__pay-not-img {
+  margin: 30px 0 40px;
+  width: 50px;
+  height: 50px;
+}
+
+.sign-up__pay-not-title {
+  font-size: 23px;
+}
+
+.sign-up__pay-not-text--bold {
+  font-weight: 700;
+}
+
+.sign-up__pay-not-row {
+  padding: 10px 150px;
+}
+
+.sign-up__pay-not-cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  height: 60px;
+  min-height: 60px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sign-up__pay-not-secure {
+  float: right;
+  padding: 2px 0;
+}
+
+.sign-up__pay-not-text {
+  font-size: 13px;
+  height: 14px;
+}
+
+.secure-server-badge--icon {
+  height: 16px;
+  margin-left: 2px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+.sign-up__pay-not-cards-group {
+  display: flex;
+  align-items: center;
+}
+
+.sign-up__pay-not-cards-desc {
+  margin: 0 10px;
+}
+
+.sign-up__pay-not-cards {
+  width: 40px;
+  height: auto;
+  margin: 0 5px;
+}
+
+.sign-up__pay-not-arrow {
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
 }

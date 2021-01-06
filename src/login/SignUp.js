@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RegForm from "./RegForm";
 import RegNotification from "./RegNotification";
+import RegPaymentNotification from "./RegPaymentNotification";
 import RegPlan from "./RegPlan";
 import RegPreview from "./RegPreview";
 
@@ -42,7 +43,7 @@ function SignUp() {
         </div>
       </header>
 
-      <RegPlan />
+      <RegPaymentNotification />
 
       {/* <footer className="sign-up-section__footer">
         <div className="footer__links-block sign-up-links-block">
