@@ -125,15 +125,9 @@
   margin: 0 0 10px 0;
 }
 
-.sections__tv {
-}
-
 .sections__download {
   display: flex;
   flex-direction: row-reverse;
-}
-
-.sections__devices {
 }
 
 .sections__questions {
@@ -168,6 +162,7 @@
   color: #fff;
   background-color: #303030;
   animation: 3s ease-in;
+  cursor: pointer;
 }
 
 .questions__svg-icon {

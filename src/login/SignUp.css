@@ -341,3 +341,7 @@ table {
   height: auto;
   margin-right: 10px;
 }
+
+.sign-up__step--left {
+  float: left;
+}
