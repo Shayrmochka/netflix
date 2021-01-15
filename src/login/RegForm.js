@@ -4,7 +4,10 @@ function RegForm() {
   return (
     <section className="sign-up__section sign-up__section-wide">
       <p className="sign-up__blue-title">Enjoy your first month. It's free.</p>
-      <p className="sign-up__steps sign-up__margin">STEP 1 OF 3</p>
+      <p className="sign-up__steps sign-up__margin">
+        STEP <span className="sign-up__step-number">1</span> OF{" "}
+        <span className="sign-up__step-number">3</span>
+      </p>
       <p className="sign-up__title sign-up__margin">
         Create a password to start your free month.
       </p>

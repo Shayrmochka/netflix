@@ -7,7 +7,10 @@ function RegPreview() {
         className="sign-up__devices-img sign-up__margin"
         src="images/devices.png"
       />
-      <p className="sign-up__steps sign-up__margin">STEP 1 OF 3</p>
+      <p className="sign-up__steps sign-up__margin">
+        STEP <span className="sign-up__step-number">1</span> OF{" "}
+        <span className="sign-up__step-number">3</span>
+      </p>
       <p className="sign-up__title sign-up__margin">
         Finish setting up your account.
       </p>

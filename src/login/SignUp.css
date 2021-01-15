@@ -32,7 +32,10 @@
 
 .sign-up__steps {
   font-size: 13px;
-  font-weight: 200;
+}
+
+.sign-up__step-number {
+  font-weight: 500;
 }
 
 .sign-up__title {
@@ -343,5 +346,116 @@ table {
 }
 
 .sign-up__step--left {
-  float: left;
+  text-align: left;
+}
+
+.sign-up__payment-title {
+  text-align: left;
+  font-size: 23px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.sign-up__form {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+
+.sign-up__form-block {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.sign-up__form-input {
+  width: 100%;
+  padding: 10px;
+  height: 60px;
+  border: solid 1px #8c8c8c;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+}
+
+.sign-up__label-name {
+  position: absolute;
+  top: 20px;
+  padding-left: 10px;
+  left: 0;
+  color: #999;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.sign-up__form-input:focus ~ .sign-up__label-name,
+.sign-up__form-input:valid ~ .sign-up__label-name {
+  top: 5px;
+  left: 0;
+  font-size: 13px;
+  font-weight: 700;
+  border-color: #5fa53f;
+  /* border-color: #b92d2b; */
+}
+
+.sign-up__form-input:focus,
+.sign-up__form-input:valid {
+  border-color: #0071eb;
+}
+
+.sign-up__chosen-plan-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  height: 70px;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+
+.sign-up__plan-data-price,
+.sign-up__plan-data-type,
+.sign-up__privacy-text {
+  text-align: left;
+}
+
+.sign-up__plan-data-price,
+.sign-up__plan-data-type {
+  padding: 2px 0;
+}
+
+.sign-up__plan-data-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.sign-up__plan-data-type {
+  font-size: 16px;
+  font-weight: 400;
+  color: #737373;
+}
+
+.sign-up__change-plan-button {
+  border: none;
+  outline: none;
+  color: #0071eb;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
+}
+
+.sign-up__privacy-text {
+  font-size: 13px;
+  color: #828282;
+  margin: 30px 0 10px;
+}
+
+.sign-up__checkbox-agree {
+  color: #828282;
+  padding-left: 10px;
+}
+
+.sign-up__continue-margin {
+  margin-top: 40px;
 }

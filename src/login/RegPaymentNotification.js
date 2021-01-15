@@ -7,7 +7,10 @@ function RegPaymentNotification() {
   return (
     <div className="sign-up__pay-not-wrapper">
       <img src="images/lock.png" className="sign-up__pay-not-img" />
-      <p className="sign-up__steps">STEP 3 OF 3</p>
+      <p className="sign-up__steps">
+        STEP <span className="sign-up__step-number">3</span> OF{" "}
+        <span className="sign-up__step-number">3</span>
+      </p>
       <h1 className="sign-up__pay-not-title sign-up__pay-not-text--bold">
         Set up your payment.
       </h1>

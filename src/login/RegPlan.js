@@ -86,7 +86,10 @@ function RegPlan() {
     <div>
       {plans.length && chosenPlan.hasOwnProperty("plan") ? (
         <div className="sign-up__price-wrapper">
-          <p className="sign-up__plan-step">STEP 1 OF 3</p>
+          <p className="sign-up__plan-step">
+            STEP <span className="sign-up__step-number">1</span> OF{" "}
+            <span className="sign-up__step-number">3</span>
+          </p>
           <h1 className="sign-up__plan-title">
             Choose the plan that’s right for you
           </h1>
