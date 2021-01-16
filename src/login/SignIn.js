@@ -46,21 +46,19 @@ function SignIn(props) {
     let password = e.target.elements.password.value;
     let signIn = e.target.elements.signIn;
     console.log(email, password);
-
+    console.log(props);
     setEmail(email);
     setPassword(password);
 
     handleSignIn();
     console.log(!!emailError, !!passwordError);
     signIn.disabled = true;
-    // <Redirect to="/movies" />;
 
     authWithEmailAndPassword(email, password).then((token) => {
       if (token) {
         console.log("work");
         history.push("/movies");
         signIn.disabled = false;
-        return <Redirect to="/movies" />;
       } else signIn.disabled = false;
     });
   };

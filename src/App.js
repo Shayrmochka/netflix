@@ -50,20 +50,18 @@ function App() {
 
   const handleSignUp = () => {
     clearErrors();
-    fire
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch((err) => {
-        switch (err.code) {
-          case "auth/email-already-in-use":
-          case "auth/invalid-email":
-            setEmailError(err.message);
-            break;
-          case "auth/weak-password":
-            setPasswordError(err.message);
-            break;
-        }
-      });
+    fire.auth().createUserWithEmailAndPassword(email, password);
+    // .catch((err) => {
+    //   switch (err.code) {
+    //     case "auth/email-already-in-use":
+    //     case "auth/invalid-email":
+    //       setEmailError(err.message);
+    //       break;
+    //     case "auth/weak-password":
+    //       setPasswordError(err.message);
+    //       break;
+    //   }
+    // });
   };
 
   const handleLogout = () => {
@@ -109,7 +107,21 @@ function App() {
         <Route path="/movies" component={MoviesLibraryPage} />
         <Route path="/contactus" component={ContactUs} />
         <Route path="/faq" component={FAQ} />
-        <Route path="/signup" component={SignUp} />
+        <Route
+          exact
+          path="/signup"
+          render={() => (
+            <SignUp
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              handleSignUp={handleSignUp}
+              emailError={emailError}
+              passwordError={passwordError}
+            />
+          )}
+        />
       </div>
     </BrowserRouter>
   );

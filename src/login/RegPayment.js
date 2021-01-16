@@ -1,6 +1,14 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { nextStep, chooseStep } from "../redux/features/registrationSlice";
 
 function RegPayment() {
+  const dispatch = useDispatch();
+  const userPlan = useSelector((state) => state.registration.userPlan);
+
+  let dateNow = new Date().getTime() + 2629800000;
+  let datePayment = new Date(dateNow);
+
   return (
     <div className="sign-up__section sign-up__section-wide">
       <p className="sign-up__blue-title">Enjoy your first month. It's free.</p>
@@ -33,7 +41,8 @@ function RegPayment() {
             <path d="M3.707 12.293l-1.414 1.414L8 19.414 21.707 5.707l-1.414-1.414L8 16.586z"></path>
           </svg>
           <span className="sign-up__li-description">
-            No charge until 2/12/21
+            No charge until {datePayment.getMonth() + 1}/{datePayment.getDate()}
+            /{datePayment.getFullYear()}
           </span>
         </li>
       </ul>
@@ -100,20 +109,25 @@ function RegPayment() {
       <div className="sign-up__chosen-plan-block">
         <div className="sign-up__plan-data">
           <p className="sign-up__plan-data-price">
-            EUR11.99/mo. after free trial
+            {userPlan.price}/mo. after free trial
           </p>
-          <p className="sign-up__plan-data-type">Premium Plan</p>
+          <p className="sign-up__plan-data-type">{userPlan.plan} Plan</p>
         </div>
         <div className="sign-up__change-plan">
-          <button className="sign-up__change-plan-button">Change</button>
+          <button
+            className="sign-up__change-plan-button"
+            onClick={() => dispatch(chooseStep(3))}
+          >
+            Change
+          </button>
         </div>
       </div>
       <p className="sign-up__privacy-text">
         By checking the checkbox below, you agree to our Terms of Use, Privacy
         Statement, and that you are over 18. Netflix will automatically continue
-        your membership and charge the monthly membership fee (currently
-        EUR11.99) to your payment method until you cancel. You may cancel at any
-        time to avoid future charges.
+        your membership and charge the monthly membership fee (currently{" "}
+        {userPlan.price}) to your payment method until you cancel. You may
+        cancel at any time to avoid future charges.
       </p>
       <div className="sign-up__checkbox-block">
         <input className="sign-up__checkbox" type="checkbox" />

@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { nextStep } from "../redux/features/registrationSlice";
 
 function RegNotification() {
+  const dispatch = useDispatch();
+
   return (
     <section className="sign-up__section">
       <img className="sign-up__checkmark-img" src="images/checkmark.png" />
@@ -25,7 +29,7 @@ function RegNotification() {
         <li className="sign-up__li-block">
           <svg
             viewBox="0 0 24 24"
-            class="sign-up__checkmark-group--icon"
+            className="sign-up__checkmark-group--icon"
             aria-hidden="true"
           >
             <path d="M3.707 12.293l-1.414 1.414L8 19.414 21.707 5.707l-1.414-1.414L8 16.586z"></path>
@@ -47,7 +51,12 @@ function RegNotification() {
           </span>
         </li>
       </ul>
-      <button className="sign-up__continue">See the Plans</button>
+      <button
+        className="sign-up__continue"
+        onClick={() => dispatch(nextStep())}
+      >
+        See the Plans
+      </button>
     </section>
   );
 }

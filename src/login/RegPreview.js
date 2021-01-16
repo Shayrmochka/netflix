@@ -1,6 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { nextStep } from "../redux/features/registrationSlice";
 
 function RegPreview() {
+  const dispatch = useDispatch();
+
   return (
     <section className="sign-up__section">
       <img
@@ -18,7 +22,12 @@ function RegPreview() {
         Netflix is personalized for you. Create a password to watch Netflix on
         any device at any time.
       </p>
-      <button className="sign-up__continue">Continue</button>
+      <button
+        className="sign-up__continue"
+        onClick={() => dispatch(nextStep())}
+      >
+        Continue
+      </button>
     </section>
   );
 }

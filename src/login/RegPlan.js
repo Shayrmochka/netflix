@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import { nextStep, setUserPlan } from "../redux/features/registrationSlice";
+
 function RegPlan() {
+  const dispatch = useDispatch();
+
   const data = [
     {
       plan: "Basic",
@@ -55,6 +60,11 @@ function RegPlan() {
     console.log(chosenPlan);
   };
 
+  const setUserData = () => {
+    dispatch(setUserPlan({ plan: chosenPlan.plan, price: chosenPlan.price }));
+    dispatch(nextStep());
+  };
+
   const svg = {
     yes: () => {
       return (
@@ -83,11 +93,11 @@ function RegPlan() {
   };
 
   return (
-    <div>
+    <div className="sign-up__reg-plan-wrapper">
       {plans.length && chosenPlan.hasOwnProperty("plan") ? (
         <div className="sign-up__price-wrapper">
           <p className="sign-up__plan-step">
-            STEP <span className="sign-up__step-number">1</span> OF{" "}
+            STEP <span className="sign-up__step-number">2</span> OF{" "}
             <span className="sign-up__step-number">3</span>
           </p>
           <h1 className="sign-up__plan-title">
@@ -378,7 +388,10 @@ function RegPlan() {
             for more details.
           </p>
           <div className="sign-up__bottom-button-wrapper">
-            <button className="sign-up__continue sign-up__reg-plan-page">
+            <button
+              className="sign-up__continue sign-up__reg-plan-page"
+              onClick={() => setUserData()}
+            >
               Continue
             </button>
           </div>

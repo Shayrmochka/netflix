@@ -1,35 +1,16 @@
 import React from "react";
-import { Link, Redirect, useHistory } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { setUserEmail } from "../redux/features/registrationSlice";
+import { Link } from "react-router-dom";
 
-import "./MainBanner.css";
-
-function MainBanner() {
-  const history = useHistory();
-  //const setUserEmail = useSelector(state => state.setUserEmail)
-  const dispatch = useDispatch();
-
-  const tryFree = (e) => {
-    e.preventDefault();
-    console.log(e.target.regEmail.value);
-    let targetEmail = e.target.regEmail.value;
-    if (targetEmail) {
-      dispatch(setUserEmail(targetEmail));
-      let regUserData = {
-        email: targetEmail,
-      };
-      localStorage.setItem("regUserData", JSON.stringify(regUserData));
-      history.push("/signup");
-    }
-  };
-
+function SignUpHeader() {
   return (
-    <div className="wrapper__image wrapper__layout">
-      <div className="wrapper--fadeTop"></div>
-      <header className="header">
+    <header className="header sign-up-border">
+      <Link to="/">
         <div className="header__logo">
-          <svg viewBox="0 0 111 30" className="header__svg" focusable="false">
+          <svg
+            viewBox="0 0 111 30"
+            className="header__svg sign-up-size"
+            focusable="false"
+          >
             <g id="netflix-logo">
               <path
                 d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,
@@ -46,49 +27,14 @@ function MainBanner() {
             </g>
           </svg>
         </div>
-        <div className="header__button">
-          <Link to="/login" className="header__sign-in">
-            Sign in
-          </Link>
-        </div>
-      </header>
-
-      <div className="main-info">
-        <div className="main-info__titles">
-          <h1 className="main-info__titles--large main-info__titles--two-lines">
-            Unlimited movies, TV shows, and more.
-          </h1>
-          <h2 className="main-info__titles--medium">
-            Watch anywhere. Cancel anytime.
-          </h2>
-          <h3 className="main-info__titles--small">
-            Ready to watch? Enter your email to create or restart your
-            membership.
-          </h3>
-        </div>
-
-        <form className="main-info__buttons" onSubmit={(e) => tryFree(e)}>
-          <input
-            className="main-info__input"
-            placeholder="Email address"
-            type="email"
-            id="regEmail"
-          />
-
-          <button className="main-info__submit" type="submit">
-            Try 30 days free
-          </button>
-        </form>
-
-        <div className="main-info__footer">
-          <h3 className="main-info__titles--smallest">
-            Only new members are eligible for this offer.
-          </h3>
-        </div>
+      </Link>
+      <div className="header__button">
+        <Link to="/login" className="header__sign-in-button">
+          Sign in
+        </Link>
       </div>
-      <div className="wrapper--fadeBottom"></div>
-    </div>
+    </header>
   );
 }
 
-export default MainBanner;
+export default SignUpHeader;

@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { nextStep } from "../redux/features/registrationSlice";
 
 function RegPaymentNotification() {
+  const dispatch = useDispatch();
   let dateNow = new Date().getTime() + 2629800000;
   let datePayment = new Date(dateNow);
 
@@ -44,7 +47,10 @@ function RegPaymentNotification() {
           </g>
         </svg>
       </div>
-      <div className="sign-up__pay-not-cards-wrapper">
+      <div
+        className="sign-up__pay-not-cards-wrapper"
+        onClick={() => dispatch(nextStep())}
+      >
         <div className="sign-up__pay-not-cards-group">
           <span className="sign-up__pay-not-cards-desc">
             Credit or Debit card
