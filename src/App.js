@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { BrowserRouter, Route, Router } from "react-router-dom";
-import fire from "./fire";
+import { fire } from "./fire";
 
 import MainPage from "./main-page/MainPage";
 import SignUp from "./login/SignUp";
@@ -10,6 +10,7 @@ import ContactUs from "./footer-pages/ContactUs";
 import FAQ from "./footer-pages/FAQ";
 
 import "./App.css";
+import UserMainPage from "./user-account/UserMainPage";
 
 function App() {
   const [user, setUser] = useState("");
@@ -50,7 +51,10 @@ function App() {
 
   const handleSignUp = () => {
     clearErrors();
-    fire.auth().createUserWithEmailAndPassword(email, password);
+    let eT = "qwe@mail.ru";
+    let pT = "qweqweqwe";
+    console.log(email, password);
+    fire.auth().createUserWithEmailAndPassword(eT, pT);
     // .catch((err) => {
     //   switch (err.code) {
     //     case "auth/email-already-in-use":
@@ -122,6 +126,7 @@ function App() {
             />
           )}
         />
+        <Route path="/account" component={UserMainPage} />
       </div>
     </BrowserRouter>
   );

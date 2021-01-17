@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Link, Redirect, useHistory } from "react-router-dom";
-import fire from "../fire";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+
+import { UserData } from "./utilities/userData";
 import "./SignIn.css";
 
 function SignIn(props) {
@@ -57,7 +58,8 @@ function SignIn(props) {
     authWithEmailAndPassword(email, password).then((token) => {
       if (token) {
         console.log("work");
-        history.push("/movies");
+        UserData.getUserData(email);
+        //history.push("/account");
         signIn.disabled = false;
       } else signIn.disabled = false;
     });
