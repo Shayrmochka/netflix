@@ -19,6 +19,7 @@ function SignIn(props) {
     setHasAccount,
     emailError,
     passwordError,
+    handleLogout,
   } = props;
 
   const authWithEmailAndPassword = (email, password) => {
@@ -46,20 +47,17 @@ function SignIn(props) {
     let email = e.target.elements.email.value;
     let password = e.target.elements.password.value;
     let signIn = e.target.elements.signIn;
-    console.log(email, password);
-    console.log(props);
     setEmail(email);
     setPassword(password);
 
-    handleSignIn();
-    console.log(!!emailError, !!passwordError);
+    handleSignIn(email, password);
+
     signIn.disabled = true;
 
     authWithEmailAndPassword(email, password).then((token) => {
       if (token) {
-        console.log("work");
         UserData.getUserData(email);
-        //history.push("/account");
+        history.push("/account");
         signIn.disabled = false;
       } else signIn.disabled = false;
     });
@@ -67,6 +65,10 @@ function SignIn(props) {
 
   const showLearnMore = () => {
     setLearnMore({ visible: true });
+  };
+
+  const test = () => {
+    handleLogout();
   };
 
   return (
@@ -94,6 +96,7 @@ function SignIn(props) {
           </div>
         </Link>
         <div className="header__button">Sign in</div>
+        <button onClick={() => handleLogout()}>LOG oUT</button>
       </header>
 
       <div className="sign-in__block-wrapper">

@@ -20,14 +20,10 @@ function RegForm(props) {
     e.preventDefault();
     let email = e.target.elements.email.value;
     let password = e.target.elements.password.value;
-    console.log(props);
-    console.log(email, password);
     if (email && password) {
       setEmail(email);
       setPassword(password);
-      handleSignUp();
-      // console.log(emailError);
-      // console.log(passwordError);
+      handleSignUp(email, password);
       dispatch(setUserEmail(email));
       dispatch(nextStep());
     }
@@ -54,12 +50,14 @@ function RegForm(props) {
           id="email"
           defaultValue={userEmail ? userEmail : ""}
         />
+        <p>{emailError}</p>
         <input
           className="sign-up__input"
           placeholder="Add a password"
           type="password"
           id="password"
         />
+        <p>{passwordError}</p>
         <div className="sign-up__checkbox-block  sign-up__margin">
           <input className="sign-up__checkbox" type="checkbox" />
           <span className="sign-up__checkbox-description">

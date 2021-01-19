@@ -19,7 +19,7 @@ function RegPayment() {
     let cardNumber = e.target.elements.cardNumber.value;
     let cardDate = e.target.elements.cardDate.value;
     let cardCVV = e.target.elements.cardCVV.value;
-    console.log(firstName);
+
     const userData = {
       firstName,
       lastName,

@@ -16,10 +16,6 @@ function MainBanner() {
     let targetEmail = e.target.regEmail.value;
     if (targetEmail) {
       dispatch(setUserEmail(targetEmail));
-      let regUserData = {
-        email: targetEmail,
-      };
-      localStorage.setItem("regUserData", JSON.stringify(regUserData));
       history.push("/signup");
     }
   };
